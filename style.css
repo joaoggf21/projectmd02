@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(45deg, #4682B4, #696969);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  border-radius: 0;
+  animation: animateGradient 10s linear infinite;
+}
+
