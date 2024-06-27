@@ -26,10 +26,8 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Developers</a>
           </li>
-          
-              </li>
               
-            </ul>
+</ul>
           </li>
           <li class="nav-item">
 
@@ -43,16 +41,43 @@
   <div class="d-flex justify-content-center ms-5 mt-5">
     <?php
     $array = ['../imagens/script05.png'];
-    for ($i = 0; $i < 4; $i++) {
+    $jogos = array(
+      array(
+          'titulo' => 'The Blue Ball Journey',
+          'descricao' => 'Na jornada da bola azul, pelo mundo de plataformas suspensas e cenários deslumbrantes, a habilidade do jogador brilha. Com pulos calculados e reflexos ágeis, avança-se em direção à meta final. Cada nível vencido é um novo triunfo no desafio emocionante do jogo.'
+      ),
+      array(
+          'titulo' => 'Call of Duty: Black Ops 6',
+          'descricao' => 'Call of Duty: Black Ops 6 é o próximo jogo de tiro eletrônico em primeira pessoa desenvolvido pela Treyarch e Raven Software e publicado pela Activision. '
+      ),
+      array(
+          'titulo' => 'Grand Theft Auto VI',
+          'descricao' => '“Grand Theft Auto VI” é o próximo jogo de ação-aventura da Rockstar Studios, sucessor de Grand Theft Auto V. Continuando a tradição da série, o jogo promete expandir o mundo aberto e oferecer novas mecânicas de jogo.'
+      ),
+      array(
+          'titulo' => 'The Last of Us Part II',
+          'descricao' => 'The Last of Us Part II é um jogo eletrônico de ação-aventura desenvolvido pela Naughty Dog e publicado pela Sony Interactive Entertainment. É o segundo jogo da franquia e foi lançado em 19 de junho de 2020 exclusivamente para PlayStation 4.'
+      )
+
+);
+ // arrey das imagens dos jogos 
+$imagens = [
+  '../imagens/script05.png',   // Imagem para o primeiro jogo
+  '../imagens/jogo02.jpg',    // Imagem para o segundo jogo
+  '../imagens/jogo03.jpg',    // Imagem para o terceiro jogo
+  '../imagens/jogo04.jpg'     // Imagem para o quarto jogo
+];
+
+  // looping for 
+  for ($i = 0; $i < count($jogos); $i++) {
     ?>
       <div class="col">
-        <div class="card ms-10" style="width: 20rem;">
-          <img src="<?php echo $array[$i] ?>" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">The Blue Ball Journeu</h5>
-            <p class="card-text">"The Blue Ball Journey" é um jogo encantador onde você guia uma bola azul através de labirintos desafiadores e cenários coloridos. Com controles simples e uma mecânica viciante, cada nível apresenta novos quebra-cabeças e obstáculos intrigantes. Prepare-se para uma aventura emocionante e cheia de surpresas enquanto busca pela saída em cada fase deste jogo cativante.</p>
-            <a href="#" class="btn btn-primary">Detalhes</a>
-          </div>
+            <div class="card ms-10" style="width: 20rem;">
+                <img src="<?php echo $imagens[$i]; ?>" class="card-img-top" alt="Imagem do Jogo">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $jogos[$i]['titulo']; ?></h5>
+                    <p class="card-text"><?php echo $jogos[$i]['descricao']; ?></p>
+                </div>
         </div>
       </div>
     <?php
